@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://planet-ota.planetcom.co.uk/schemas/codi_codid_manifest.json",
+  "title": "CoDi daemon manifest",
+  "description": "Manifest included with Cosmo-CoDiOS's CoDi daemon.",
+  "type": "object",
+  "properties": {
+    "lastUpdated": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "checksum": {
+          "type": "string"
+        },
+        "vendor": {
+          "type": "string",
+          "enum": [
+            "CODI_OS"
+          ]
+        }
+      },
+      "required": [
+        "version",
+        "checksum",
+        "vendor"
+      ]
+    }
+  },
+  "required": [
+    "metadata"
+  ]
+}

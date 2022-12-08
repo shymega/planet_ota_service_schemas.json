@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://planet-ota.planetcom.co.uk/schemas/codi_firmware_manifest.json",
+  "title": "CoDi firmware manifest",
+  "description": "Manifest included with the CoDi firmware.",
+  "type": "object",
+  "properties": {
+    "lastUpdated": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "checksum": {
+          "type": "string"
+        },
+        "vendor": {
+          "type": "string",
+          "enum": [
+            "PLANET",
+            "CODI_OS"
+          ]
+        },
+        "compatResource": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Version",
+        "Checksum",
+        "Vendor",
+        "CompatResource"
+      ]
+    }
+  },
+  "required": [
+    "metadata"
+  ]
+}
